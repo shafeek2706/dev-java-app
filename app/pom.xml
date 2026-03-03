@@ -78,13 +78,14 @@
 
     <!-- Deployment configuration for Artifactory/Nexus -->
     <distributionManagement>
-        <repository>
-            <id>internal-repo</id>
-            <url>http://192.168.1.78:8081/artifactory/libs-snapshot-local</url>
-        </repository>
-        <snapshotRepository>
-            <id>internal-repo-snapshots</id>
-            <url>http://192.168.1.78:8081/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <repository>
+        <id>nexus-releases</id>
+        <url>http://192.168.1.78:8081/repository/maven-releases/</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>nexus-snapshots</id>
+        <url>http://192.168.1.78:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
